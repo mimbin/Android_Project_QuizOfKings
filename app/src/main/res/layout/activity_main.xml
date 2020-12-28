@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="25dp"
+        android:textAlignment="center"
+        android:textSize="21dp"
+        android:textColor="@android:color/white"
+        android:text="اگر کاربر جدید هستید و تا به حال عضو بازی نشدید" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="کاربر جدید"
+        android:background="@drawable/button"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="500dp"
+       />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="570dp"
+        android:layout_marginLeft="45dp"
+        android:textAlignment="center"
+        android:textSize="21dp"
+        android:textColor="@android:color/white"
+        android:text="اگر قبلا عضو شدید گزینه زیر رو انتخاب کنید" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="عضو هستم(ورود)"
+        android:background="@drawable/button"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="620dp"
+        />
+
+
+
+</RelativeLayout>
