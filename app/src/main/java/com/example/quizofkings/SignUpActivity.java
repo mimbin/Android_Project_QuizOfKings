@@ -74,6 +74,9 @@ public class SignUpActivity extends AppCompatActivity {
                 {
                     text6.setText(e.getMessage());
                 }
+                user=new User(username,password);
+                users.add(user);
+                UserNames.add(username);
                 openGame();
 
             }
