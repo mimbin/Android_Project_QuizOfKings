@@ -6,29 +6,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     Button button1;
     Button button2;
+    ImageView imageView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        button1=(Button)findViewById(R.id.btn1);
-//        button2=(Button)findViewById(R.id.btn2);
-//        button1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openLogin();
-//
-//            }
-//        });
-//        button2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                openSignUp();
-//            }
-//        });
+        imageView1=(ImageView)findViewById(R.id.img1);
+        button1=(Button)findViewById(R.id.btn1);
+        button2=(Button)findViewById(R.id.btn2);
+        button1.setOnClickListener(new View.OnClickListener() {
+           @Override
+            public void onClick(View v) {
+                openSignUp();
+
+           }
+     });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLogin();
+           }
+       });
     }
 
     public void openLogin(){
