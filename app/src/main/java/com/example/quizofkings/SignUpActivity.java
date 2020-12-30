@@ -31,7 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
     TextView text6;
     ImageView imageView2;
     User user;
-    ArrayList<User> users=new ArrayList<>();
+     ArrayList<User> users=new ArrayList<>();
     ArrayList<String> UserNames=new ArrayList<>();
 
     @Override
@@ -44,48 +44,67 @@ public class SignUpActivity extends AppCompatActivity {
         text5=(EditText)findViewById(R.id.text5);
         text6=(TextView)findViewById(R.id.text6);
         button3=(Button)findViewById(R.id.btn3);
+        String username=text3.getText().toString();
+        String password=text4.getText().toString();
+        String repPassword=text5.getText().toString();
 
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username=text3.getText().toString();
-                if(text3.getText().toString().isEmpty())
-                    text6.setText("please fill the details");
-                String password=text4.getText().toString();
-                if(text4.getText().toString().isEmpty())
-                    text6.setText("please fill the details");
-                try {
-                    checkPassword(password);
-                }
-                catch (InvalidPassword e)
-                {
-                    text6.setText(e.getMessage());
-                }
-                String repeatedPass=text5.getText().toString();
-                if(text5.getText().toString().isEmpty())
-                    text6.setText("please fill the details");
+        while (true)
+        {
+            if(username.isEmpty())
+                text6.setText("please fill the blank");
 
-                if(!password.equals(repeatedPass))
-                {
-                    text6.setText("password repeated is not correct");
-                }
+            else
                 try {
                     checkUser(UserNames,username);
-                    UserNames.add(username);
-
+                    break;
                 }
                 catch (InvalidUsername e)
                 {
                     text6.setText(e.getMessage());
+                    continue;
                 }
-                user=new User(username,password);
-                users.add(user);
-                UserNames.add(username);
-                openGame();
+        }
+        while (true)
+        {
+            if(password.isEmpty())
+                text6.setText("please fill the blank");
 
+            else
+                try {
+                    checkPassword(password);
+                    break;
+                }
+                catch (InvalidPassword e)
+                {
+                    text6.setText(e.getMessage());
+                    continue;
+                }
+        }
+        while (true)
+        {
+            if(repPassword.isEmpty())
+                text6.setText("please fill the blank");
+
+            else if(!password.equals(repPassword))
+                text6.setText("password and repeated password are not the same");
+
+            else {
+                text6.setText(null);
+                break;
+            }
+
+
+        }
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGame();
             }
         });
+
+
     }
+
     public void openGame(){
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);

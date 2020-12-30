@@ -6,5 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/img3"
+        android:background="@drawable/imge"
+        />
+    <EditText
+        android:id="@+id/text7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="نام کاربری"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_marginTop="200dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text8"
+        android:hint="رمز عبور"
+        android:layout_marginTop="260dp"
+        android:backgroundTint="@android:color/holo_blue_light"/>
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn4"
+        android:background="@android:color/holo_blue_light"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="120dp"
+        android:text="ورود"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text9"
+        android:layout_marginTop="390dp"/>
+
+
+
+
 
 </RelativeLayout>
