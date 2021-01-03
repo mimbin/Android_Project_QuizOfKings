@@ -1,58 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/img"
+    >
 
 
-    <ImageView
-        android:id="@+id/img1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/img" />
+<!--    <ImageView-->
+<!--        android:id="@+id/img1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/img" />-->
 
     <TextView
-        android:id="@+id/text1"
-        android:layout_width="wrap_content"
+        android:id="@+id/welcomeSignUpText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="320dp"
         android:text="اگر کاربر جدید هستید و تا به حال عضو بازی نشدید"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/newUserButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="370dp"
-        android:layout_marginLeft="90dp"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeSignUpText"
+        app:layout_constraintStart_toStartOf="@+id/welcomeSignUpText"
+        app:layout_constraintEnd_toEndOf="@+id/welcomeSignUpText"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="کاربر جدید"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="کاربر جدید" />
 
+        />
+<!--text2-->
     <TextView
-        android:id="@+id/text2"
+        android:id="@+id/welcomeLogInText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="440dp"
-        android:layout_marginStart="55dp"
-        android:text="اگر قبلا عضو شدید گزینه زیر را انتخاب کنید"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:textSize="18sp"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        app:layout_constraintTop_toBottomOf="@+id/newUserButton"
+        app:layout_constraintStart_toStartOf="@+id/welcomeSignUpText"
+        app:layout_constraintEnd_toEndOf="@+id/welcomeSignUpText"
 
+        android:textColor="@android:color/white"
+        android:text="اگر قبلا عضو شدید گزینه زیر را انتخاب کنید"
+        />
+<!--btn2-->
     <Button
-        android:id="@+id/btn2"
+        android:id="@+id/LoginWelcomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="485dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeLogInText"
+        app:layout_constraintStart_toStartOf="@+id/welcomeLogInText"
+        app:layout_constraintEnd_toEndOf="@+id/welcomeLogInText"
+
         android:backgroundTint="@android:color/holo_blue_light"
         android:text="عضو هستم(ورود)" />
 
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
