@@ -38,17 +38,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="440dp"
-        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
         android:text="اگر قبلا عضو شدید گزینه زیر را انتخاب کنید"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
+        android:layout_marginStart="130dp"
         android:layout_marginTop="485dp"
         android:backgroundTint="@android:color/holo_blue_light"
         android:text="عضو هستم(ورود)" />

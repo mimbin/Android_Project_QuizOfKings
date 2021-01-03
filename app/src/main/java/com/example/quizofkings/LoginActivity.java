@@ -18,10 +18,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginactivity);
-        imageView3=(ImageView)findViewById(R.id.img3);
+        //imageView3=(ImageView)findViewById(R.id.img3);
         button4=(Button)findViewById(R.id.btn4);
-        text7=(EditText)findViewById(R.id.text7);
-        text8=(EditText)findViewById(R.id.text8);
+        text7=(EditText)findViewById(R.id.usernameText);
+        text8=(EditText)findViewById(R.id.passwordText);
         text9=(TextView)findViewById(R.id.text9);
         String username=text7.getText().toString();
         String password=text8.getText().toString();
