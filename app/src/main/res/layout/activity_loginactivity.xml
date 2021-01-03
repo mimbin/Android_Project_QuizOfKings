@@ -14,38 +14,35 @@
 <!--        />-->
 
     <EditText
-        android:id="@+id/usernameText"
+        android:id="@+id/usernameSignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@android:color/holo_blue_light"
         android:hint="نام کاربری"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.628"
-        />
+        app:layout_constraintVertical_bias="0.609" />
 
     <EditText
-        android:id="@+id/passwordText"
+        android:id="@+id/passwordSignIn"
+        android:hint="رمز عبور"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="190dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
-        android:hint="رمز عبور"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/usernameText"
-        app:layout_constraintStart_toStartOf="@+id/usernameText"
+        app:layout_constraintTop_toBottomOf="@+id/usernameSignIn"
+        app:layout_constraintEnd_toEndOf="@+id/usernameSignIn"
+        app:layout_constraintStart_toStartOf="@+id/usernameSignIn"
         android:backgroundTint="@android:color/holo_blue_light"
-        app:layout_constraintTop_toBottomOf="@+id/usernameText" />
+
+        />
 
     <Button
-        android:id="@+id/btn4"
+        android:id="@+id/signInButton"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="100dp"
@@ -54,7 +51,7 @@
         android:text="ورود"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordSignIn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

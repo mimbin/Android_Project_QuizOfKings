@@ -8,23 +8,60 @@
     tools:context=".SignUpActivity">
 
     <EditText
-        android:id="@+id/text3"
+        android:id="@+id/signUpUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="340dp"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:hint="نام کاربری"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="نام کاربری"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:autofillHints="player"
+        />
+
+    <EditText
+        android:id="@+id/signUpPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/signUpUsername"
+        app:layout_constraintEnd_toEndOf="@+id/signUpUsername"
+        app:layout_constraintStart_toStartOf="@+id/signUpUsername"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:hint="رمز عبور"
+        android:autofillHints="player" />
+            <!-- this is a default username-->
+
+    <EditText
+        android:id="@+id/repeatSignUpPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPass"
+        app:layout_constraintEnd_toEndOf="@+id/signUpUsername"
+        app:layout_constraintStart_toStartOf="@+id/signUpUsername"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:hint="تکرار رمز عبور"
+        android:autofillHints="player" />
+
     <Button
-        android:id="@+id/btn3"
+        android:id="@+id/signUpButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="590dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/repeatSignUpPass"
+        app:layout_constraintEnd_toEndOf="@+id/repeatSignUpPass"
+        app:layout_constraintStart_toStartOf="@+id/repeatSignUpPass"
         android:background="@drawable/button"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="ثبت نام" />
+        android:text="ثبت نام"
+
+        />
 
     <EditText
         android:id="@+id/text4"

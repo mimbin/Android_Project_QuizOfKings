@@ -39,11 +39,11 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 //        imageView2=(ImageView)findViewById(R.id.img2);
-        text3=(EditText)findViewById(R.id.text3);
+        text3=(EditText)findViewById(R.id.signUpUsername);
         text4=(EditText)findViewById(R.id.text4);
-        text5=(EditText)findViewById(R.id.text5);
+        text5=(EditText)findViewById(R.id.repeatSignUpPass);
         text6=(TextView)findViewById(R.id.text6);
-        button3=(Button)findViewById(R.id.btn3);
+        button3=(Button)findViewById(R.id.signUpButton);
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
