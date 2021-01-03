@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/img"
+    android:background="@drawable/im"
     >
+<!--    android:background="@drawable/img"-->
 
 
 <!--    <ImageView-->
@@ -22,7 +23,7 @@
         android:text="اگر کاربر جدید هستید و تا به حال عضو بازی نشدید"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

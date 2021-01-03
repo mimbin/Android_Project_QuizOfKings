@@ -9,9 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    Button button1;
-    Button button2;
-    ImageView imageView1;
+    private Button button1;
+    private Button button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
