@@ -19,10 +19,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginactivity);
         //imageView3=(ImageView)findViewById(R.id.img3);
-        button4=(Button)findViewById(R.id.signInButton);
-        text7=(EditText)findViewById(R.id.usernameSignIn);
-        text8=(EditText)findViewById(R.id.passwordSignIn);
-        text9=(TextView)findViewById(R.id.text9);
+        button4=(Button)findViewById(R.id.LogInButton);
+        text7=(EditText)findViewById(R.id.UsernameLogIn);
+        text8=(EditText)findViewById(R.id.PassLogIn);
+        text9=(TextView)findViewById(R.id.signInText);
         String username=text7.getText().toString();
         String password=text8.getText().toString();
 
