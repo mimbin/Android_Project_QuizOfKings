@@ -23,13 +23,18 @@ class InvalidPassword extends Exception{
         super(msg);
     }
 }
+class notEqualExeption extends Exception{
+    notEqualExeption(String msg)
+    {
+        super(msg);
+    }
+}
 public class SignUpActivity extends AppCompatActivity {
-    Button button3;
-    EditText text3;
-    EditText text4;
-    EditText text5;
-    TextView text6;
-    ImageView imageView2;
+    Button buttonSignUp;
+    EditText username;
+    EditText password;
+    EditText repeatedPass;
+    TextView result;
     User user;
     ArrayList<User> users=new ArrayList<>();
     ArrayList<String> UserNames=new ArrayList<>();
@@ -38,50 +43,61 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-//        imageView2=(ImageView)findViewById(R.id.img2);
-        text3=(EditText)findViewById(R.id.text3);
-        text4=(EditText)findViewById(R.id.text4);
-        text5=(EditText)findViewById(R.id.text5);
-        text6=(TextView)findViewById(R.id.text6);
-        button3=(Button)findViewById(R.id.btn3);
+        username=(EditText)findViewById(R.id.signUpUsername);
+        password=(EditText)findViewById(R.id.signUpPass);
+        repeatedPass=(EditText)findViewById(R.id.repeatSignUpPass);
+        result=(TextView)findViewById(R.id.signUpText);
+        buttonSignUp=(Button)findViewById(R.id.signUpButton);
 
-        button3.setOnClickListener(new View.OnClickListener() {
+        final String UserName=username.getText().toString();
+        final String Password=password.getText().toString();
+        final String RepeatedPass=repeatedPass.getText().toString();
+
+
+        password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username=text3.getText().toString();
-                if(text3.getText().toString().isEmpty())
-                    text6.setText("please fill the details");
-                String password=text4.getText().toString();
-                if(text4.getText().toString().isEmpty())
-                    text6.setText("please fill the details");
-                try {
-                    checkPassword(password);
-                }
-                catch (InvalidPassword e)
-                {
-                    text6.setText(e.getMessage());
-                }
-                String repeatedPass=text5.getText().toString();
-                if(text5.getText().toString().isEmpty())
-                    text6.setText("please fill the details");
+                if(UserName.isEmpty())
+                    result.setText("please fill the details");
+            }
+        });
 
-                if(!password.equals(repeatedPass))
-                {
-                    text6.setText("password repeated is not correct");
-                }
-                try {
-                    checkUser(UserNames,username);
-                    UserNames.add(username);
+       repeatedPass.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               if(Password.isEmpty())
+                   result.setText("please fill the details");
+               try {
+                   checkPassword(Password);
+               }
+               catch (InvalidPassword e)
+               {
+                   result.setText(e.getMessage());
+               }
 
+           }
+       });
+
+       buttonSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    checkEqual(Password,RepeatedPass);
+                    checkUser(UserNames,UserName);
+                    UserNames.add(UserName);
+                    user=new User(UserName,Password);
+                    users.add(user);
+                    openGame();
+
+                }
+                catch (notEqualExeption e)
+                {
+                    result.setText(e.getMessage());
                 }
                 catch (InvalidUsername e)
                 {
-                    text6.setText(e.getMessage());
+                    result.setText(e.getMessage());
                 }
-                user=new User(username,password);
-                users.add(user);
-                UserNames.add(username);
-                openGame();
 
             }
         });
@@ -100,5 +116,9 @@ public class SignUpActivity extends AppCompatActivity {
         {
             throw new InvalidPassword("password should be  more than 5 characters");
         }
+    }
+    public static void checkEqual(String pass1,String pass2) throws notEqualExeption {
+        if(!pass1.equals(pass2))
+            throw new notEqualExeption("password is not repeated correctly");
     }
 }

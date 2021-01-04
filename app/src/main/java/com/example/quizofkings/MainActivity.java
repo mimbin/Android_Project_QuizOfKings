@@ -9,17 +9,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    Button button1;
-    Button button2;
+    Button buttonSignUp;
+    Button buttonLogin;
     ImageView imageView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageView1=(ImageView)findViewById(R.id.img1);
-        button1=(Button)findViewById(R.id.btn1);
-        button2=(Button)findViewById(R.id.btn2);
-        button1.setOnClickListener(new View.OnClickListener() {
+        buttonSignUp=(Button)findViewById(R.id.btnSignUp);
+        buttonLogin=(Button)findViewById(R.id.btnLogin);
+        buttonSignUp.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View v) {
                 openSignUp();
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
            }
      });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openLogin();

@@ -2,30 +2,37 @@ package com.example.quizofkings;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
-    ImageView imageView3;
-     EditText text7;
-     EditText text8;
-     Button button4;
-     TextView text9;
+     EditText username;
+     EditText password;
+     Button buttonLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginactivity);
-        //imageView3=(ImageView)findViewById(R.id.img3);
-        button4=(Button)findViewById(R.id.btn4);
-        text7=(EditText)findViewById(R.id.usernameText);
-        text8=(EditText)findViewById(R.id.passwordText);
-        text9=(TextView)findViewById(R.id.text9);
-        String username=text7.getText().toString();
-        String password=text8.getText().toString();
+        buttonLogin=(Button)findViewById(R.id.btnLog);
+        username=(EditText)findViewById(R.id.usernameText);
+        password=(EditText)findViewById(R.id.passwordText);
+        String UserName=username.getText().toString();
+        String Password=password.getText().toString();
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGame();
 
-
+            }
+        });
+    }
+    public void openGame(){
+        Intent intent = new Intent(this, GameActivity.class);
+        startActivity(intent);
     }
 }

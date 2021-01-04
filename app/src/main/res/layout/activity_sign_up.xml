@@ -57,7 +57,6 @@
         app:layout_constraintTop_toBottomOf="@+id/repeatSignUpPass"
         app:layout_constraintEnd_toEndOf="@+id/repeatSignUpPass"
         app:layout_constraintStart_toStartOf="@+id/repeatSignUpPass"
-        android:background="@drawable/button"
         android:backgroundTint="@android:color/holo_green_light"
         android:text="ثبت نام"
 
@@ -79,42 +78,5 @@
 
         />
 
-    <EditText
-        android:id="@+id/text4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:layout_marginTop="260dp"
-        android:hint="رمز عبور"/>
-
-    <EditText
-        android:id="@+id/text5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:layout_marginTop="310dp"
-        android:hint="تکرار رمز عبور"/>
-
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:text="ثبت نام"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="370dp"
-        android:bottomRightRadius="10dp"
-        android:bottomLeftRadius="10dp"
-        android:topLeftRadius="10dp"
-        android:topRightRadius="10dp"
-        />
-
-    <TextView
-        android:id="@+id/text6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="440dp"
-        android:layout_marginLeft="100dp"
-            />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
