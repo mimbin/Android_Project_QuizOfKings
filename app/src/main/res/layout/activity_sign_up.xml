@@ -4,62 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
     android:background="@drawable/imge"
-    tools:context=".SignUpActivity">
-
-    <Button
-        android:id="@+id/signUpButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="184dp"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:text="ثبت نام"
-        app:layout_constraintEnd_toEndOf="@+id/repeatSignUpPass"
-        app:layout_constraintStart_toStartOf="@+id/repeatSignUpPass"
-        app:layout_constraintTop_toBottomOf="@id/repeatSignUpPass"
-
-
-        />
+    >
 
     <EditText
         android:id="@+id/signUpPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
         android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="8dp"
         android:autofillHints="player"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/repeatSignUpPass"
+        app:layout_constraintEnd_toEndOf="@+id/signUpUsername"
+        app:layout_constraintStart_toStartOf="@+id/signUpUsername"
+        app:layout_constraintTop_toBottomOf="@+id/signUpUsername"
         android:backgroundTint="@android:color/holo_green_light"
         android:hint="رمز عبور"
-        app:layout_constraintEnd_toEndOf="@+id/signUpUsername"
-        app:layout_constraintStart_toStartOf="@+id/signUpUsername"
-        app:layout_constraintTop_toBottomOf="@+id/signUpUsername" />
 
-    <EditText
-        android:id="@+id/repeatSignUpPass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:hint="تکرار رمز عبور"
-        app:layout_constraintBottom_toTopOf="signUpButton"
-        app:layout_constraintEnd_toEndOf="@+id/signUpUsername"
-        app:layout_constraintStart_toStartOf="@+id/signUpUsername"
-        app:layout_constraintTop_toBottomOf="@+id/signUpPass" />
+        />
+
+
 
     <EditText
         android:id="@+id/signUpUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@android:color/holo_green_light"
         android:hint="نام کاربری"
+        app:layout_constraintBottom_toTopOf="@+id/signUpPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpText"
+        />
 
     <TextView
         android:id="@+id/signUpText"
@@ -67,13 +47,73 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="296dp"
         android:text="مشخصات جدید را وارد نمایید"
         android:textAlignment="center"
         android:textColor="#D6D6D6"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/signUpUsername"
         app:layout_constraintEnd_toEndOf="@+id/signUpUsername"
+
         app:layout_constraintStart_toStartOf="@+id/signUpUsername"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<EditText
+            android:id="@+id/repeatSignUpPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:hint="تکرار رمز عبور"
+            app:layout_constraintBottom_toTopOf="signUpButton"
+            app:layout_constraintEnd_toEndOf="@+id/signUpUsername"
+            app:layout_constraintStart_toStartOf="@+id/signUpUsername"
+            app:layout_constraintTop_toBottomOf="@+id/signUpPass" />-->
+
+    <EditText
+        android:id="@+id/repeatSignUpPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="2dp"
+        android:hint="تکرار رمز عبور"
+        android:inputType="textPassword"
+        android:textAlignment="textEnd"
+        android:textDirection="rtl"
+        android:backgroundTint="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        app:layout_constraintEnd_toEndOf="@+id/signUpPass"
+        app:layout_constraintStart_toStartOf="@+id/signUpPass"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPass" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/signUpButton"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginBottom="184dp"-->
+    <!--        android:layout_marginHorizontal="8dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:backgroundTint="@android:color/holo_green_light"-->
+    <!--        android:text="ثبت نام"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/repeatSignUpPass"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/repeatSignUpPass"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/repeatSignUpPass"-->
+
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="170dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/repeatSignUpPass"
+        app:layout_constraintStart_toStartOf="@id/repeatSignUpPass"
+        app:layout_constraintTop_toBottomOf="@+id/repeatSignUpPass"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="ثبت نام"
 
         />
 
