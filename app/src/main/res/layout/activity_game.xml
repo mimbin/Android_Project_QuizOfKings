@@ -3,9 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/back"
-    tools:context=".GameActivity">
+    android:layout_height="wrap_content"
+    tools:context=".GameActivity"
+    android:background="@drawable/back">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/container"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu"
+        android:id="@+id/navigation">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 
