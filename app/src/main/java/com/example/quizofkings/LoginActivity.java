@@ -10,19 +10,23 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 public class LoginActivity extends AppCompatActivity {
      EditText username;
      EditText password;
      Button buttonLogin;
+     TextView loginUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginactivity);
-        buttonLogin=(Button)findViewById(R.id.btnLog);
-        username=(EditText)findViewById(R.id.usernameText);
-        password=(EditText)findViewById(R.id.passwordText);
-        String UserName=username.getText().toString();
-        String Password=password.getText().toString();
+        buttonLogin = (Button) findViewById(R.id.btnLog);
+        username = (EditText) findViewById(R.id.usernameText);
+        password = (EditText) findViewById(R.id.passwordText);
+        loginUser = (TextView) findViewById(R.id.loginUser);
+
+
+
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
