@@ -7,22 +7,46 @@
     tools:context=".newGameActivity"
     android:background="@drawable/back">
 
+    <TextView
+        android:id="@+id/chooseGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="60dp"
+        android:text="موضوع خود را مشخص کنید"
+        android:textAlignment="center"
+        android:textColor="#D6D6D6"
+        android:textSize="30dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button2"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="100dp"
+        android:text="موضوعات جدید"/>
+
+    <Button
+        android:id="@+id/q1"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
         android:layout_marginTop="400dp"
         android:layout_marginLeft="100dp"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/q2"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="160dp"
         android:layout_marginTop="340dp"
         android:background="@drawable/button" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/q3"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
         android:layout_marginTop="400dp"

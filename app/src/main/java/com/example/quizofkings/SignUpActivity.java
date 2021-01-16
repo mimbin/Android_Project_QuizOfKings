@@ -119,7 +119,17 @@ public class SignUpActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public static void checkUser(ArrayList<String> userNames,String username) throws InvalidUsername {
-        if(userNames.contains(username))
+        int i=0;
+        boolean res=false;
+        while (i<=UserNames.size())
+        {
+            if(UserNames.get(i).equals(username))
+            {
+                res=true;
+                break;
+            }
+        }
+        if(!res)
             throw new InvalidUsername("این نام کاربری توسط شخص دیگری استفاده شده");
     }
     public static void checkPassword(String password) throws InvalidPassword {
