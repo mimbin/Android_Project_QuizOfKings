@@ -3,34 +3,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment"
     android:background="@drawable/back">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light"
+        android:background="@drawable/border"
+        android:backgroundTint="@android:color/holo_orange_light"
         android:layout_marginTop="150dp"
         android:id="@+id/infinitGame"
+        android:drawableTop="@drawable/ic_baseline_all_inclusive_24"
         android:text="بازی نامحدود" />
 
     <Button
         android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_green_light"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:background="@drawable/border"
         android:layout_marginTop="210dp"
         android:id="@+id/newGame"
-        android:text="بازی جدید" />
+        android:text="بازی جدید"
+        android:drawableTop="@drawable/ic_baseline_play"
+        />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_green_light"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:background="@drawable/border"
         android:layout_marginTop="210dp"
         android:id="@+id/starLig"
         android:layout_marginLeft="210dp"
         android:text="لیگ ستاره"
+        android:drawableTop="@drawable/ic_baseline_emoji"
         android:enabled="false"/>
+
+    <TextView
+        android:id="@+id/maindesk"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/border"
+        android:backgroundTint="@android:color/holo_blue_light"
+        />
+
+    <TextView
+        android:id="@+id/desk"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:textAlignment="viewEnd"
+        />
+
+    <TextView
+        android:id="@+id/desk2"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="260dp"
+        android:drawableLeft="@drawable/ic_baseline_events"
+        />
+
+    <ImageView
+        android:id="@+id/coin"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/coin"/>
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -39,7 +79,8 @@
         android:backgroundTint="@android:color/holo_orange_light"
         android:src="@drawable/ic_gift"
         android:layout_gravity="right"
-        android:layout_marginTop="530dp"/>
+        android:layout_marginTop="530dp"
+        app:fabSize="normal"/>
 
 
 

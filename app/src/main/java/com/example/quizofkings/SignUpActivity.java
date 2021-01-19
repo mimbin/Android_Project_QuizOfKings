@@ -39,6 +39,7 @@ public class SignUpActivity extends AppCompatActivity {
     private static ArrayList<User> users=new ArrayList<>();
     private static ArrayList<String> UserNames=new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,17 +121,14 @@ public class SignUpActivity extends AppCompatActivity {
     }
     public static void checkUser(ArrayList<String> userNames,String username) throws InvalidUsername {
         int i=0;
-        boolean res=false;
-        while (i<=UserNames.size())
+        while (i<=userNames.size())
         {
-            if(UserNames.get(i).equals(username))
+            if(userNames.get(i).equals(username))
             {
-                res=true;
-                break;
+                throw new InvalidUsername("این نام کاربری توسط شخص دیگری استفاده شده");
             }
         }
-        if(!res)
-            throw new InvalidUsername("این نام کاربری توسط شخص دیگری استفاده شده");
+
     }
     public static void checkPassword(String password) throws InvalidPassword {
         if(password.length()<5)

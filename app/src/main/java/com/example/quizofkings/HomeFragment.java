@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -52,17 +53,23 @@ public class HomeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.fragment_home, container, false);
-        Button newGame=(Button)view.findViewById(R.id.newGame);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        Button newGame = (Button) view.findViewById(R.id.newGame);
+        TextView MainDesk=(TextView) view.findViewById(R.id.maindesk);
+        TextView desk=(TextView) view.findViewById(R.id.desk);
+        TextView desk2=(TextView) view.findViewById(R.id.desk2);
+        Button infinite = (Button) view.findViewById(R.id.infinitGame);
+        FloatingActionButton fab=(FloatingActionButton) view.findViewById(R.id.fab);
+        desk.setText("200");
+
         newGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getContext(),newGameActivity.class);
+                Intent intent = new Intent(getContext(), newGameActivity.class);
                 startActivity(intent);
             }
         });
 
-        FloatingActionButton fab=(FloatingActionButton)view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +77,6 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
         return view;
     }
 }

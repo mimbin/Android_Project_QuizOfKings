@@ -32,15 +32,15 @@
         android:id="@+id/q1"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="400dp"
-        android:layout_marginLeft="100dp"/>
+        android:background="@drawable/button" />
 
     <Button
         android:id="@+id/q2"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="160dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="340dp"
         android:background="@drawable/button" />
 
@@ -48,10 +48,9 @@
         android:id="@+id/q3"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button"
+        android:layout_marginLeft="200dp"
         android:layout_marginTop="400dp"
-        android:layout_marginLeft="220dp"/>
-
+        android:background="@drawable/button" />
 
 
 </RelativeLayout>
