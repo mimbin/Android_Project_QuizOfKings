@@ -21,7 +21,7 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/signUpUsername"
         app:layout_constraintEnd_toEndOf="@+id/signUpUsername"
-
+        android:singleLine="true"
         app:layout_constraintStart_toStartOf="@+id/signUpUsername"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,6 +38,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signUpText"
         android:singleLine="true"
+        android:nextFocusDown="@id/signUpPass"
+
         />
 
     <EditText
@@ -55,6 +57,8 @@
         android:backgroundTint="@android:color/holo_green_light"
         android:hint="رمز عبور"
         android:singleLine="true"
+        android:nextFocusForward="@id/repeatSignUpPass"
+
 
         />
 
@@ -76,6 +80,7 @@
         app:layout_constraintStart_toStartOf="@+id/signUpPass"
         app:layout_constraintTop_toBottomOf="@+id/signUpPass"
         android:singleLine="true"
+
         />
 
 

@@ -1,43 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingFragment"
     android:background="@drawable/imge">
 
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <Button
         android:id="@+id/changeUser"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="390dp"
         android:background="@android:color/holo_orange_light"
         android:text="تغییر نام کاریری"
-        android:layout_marginLeft="135dp"
-        android:layout_marginTop="290dp"
+        app:layout_constraintBottom_toTopOf="@+id/changePass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
         />
 
     <Button
         android:id="@+id/changePass"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:background="@android:color/holo_orange_light"
         android:text="تغییر رمز عبور"
-        android:layout_marginLeft="135dp"
-        android:layout_marginTop="350dp"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/changeProfile"
+        app:layout_constraintEnd_toEndOf="@+id/changeUser"
+        app:layout_constraintStart_toStartOf="@+id/changeUser"
+        app:layout_constraintTop_toBottomOf="@+id/changeUser" />
 
     <Button
         android:id="@+id/changeProfile"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="271dp"
         android:background="@android:color/holo_orange_light"
         android:text="تغییر آواتار"
-        android:layout_marginLeft="135dp"
-        android:layout_marginTop="408dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/changePass"
+        app:layout_constraintStart_toStartOf="@+id/changePass"
+        app:layout_constraintTop_toBottomOf="@+id/changePass" />
 
 
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

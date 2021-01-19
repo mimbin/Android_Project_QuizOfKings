@@ -6,82 +6,132 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment"
     android:background="@drawable/back">
-
-    <Button
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:layout_marginTop="150dp"
-        android:id="@+id/infinitGame"
-        android:drawableTop="@drawable/ic_baseline_all_inclusive_24"
-        android:text="بازی نامحدود" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:background="@drawable/border"
-        android:layout_marginTop="210dp"
-        android:id="@+id/newGame"
-        android:text="بازی جدید"
-        android:drawableTop="@drawable/ic_baseline_play"
-        />
+        <Button
+            android:id="@+id/infinitGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:drawableTop="@drawable/ic_baseline_all_inclusive_24"
+            android:text="بازی نامحدود"
+            app:layout_constraintBottom_toTopOf="@+id/newGame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:background="@drawable/border"
-        android:layout_marginTop="210dp"
-        android:id="@+id/starLig"
-        android:layout_marginLeft="210dp"
-        android:text="لیگ ستاره"
-        android:drawableTop="@drawable/ic_baseline_emoji"
-        android:enabled="false"/>
-
-    <TextView
-        android:id="@+id/maindesk"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@drawable/border"
-        android:backgroundTint="@android:color/holo_blue_light"
-        />
-
-    <TextView
-        android:id="@+id/desk"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:textAlignment="viewEnd"
-        />
-
-    <TextView
-        android:id="@+id/desk2"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="260dp"
-        android:drawableLeft="@drawable/ic_baseline_events"
-        />
-
-    <ImageView
-        android:id="@+id/coin"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/coin"/>
+        <Button
+            android:id="@+id/newGame"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:drawableTop="@drawable/ic_baseline_play"
+            android:text="بازی جدید"
+            app:layout_constraintEnd_toStartOf="@+id/starLig"
+            app:layout_constraintStart_toStartOf="@+id/infinitGame"
+            app:layout_constraintTop_toBottomOf="@+id/infinitGame" />
 
 
+        <Button
+            android:id="@+id/starLig"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:drawableTop="@drawable/ic_baseline_emoji"
+            android:enabled="false"
+            android:text="لیگ ستاره"
+            app:layout_constraintBottom_toBottomOf="@+id/newGame"
+            app:layout_constraintEnd_toEndOf="@+id/infinitGame"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/newGame"
+            app:layout_constraintTop_toBottomOf="@+id/infinitGame"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:src="@drawable/ic_gift"
-        android:layout_gravity="right"
-        android:layout_marginTop="530dp"
-        app:fabSize="normal"/>
+        <TextView
+            android:id="@+id/maindesk"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@android:color/holo_blue_light"
+            app:layout_constraintBottom_toTopOf="@+id/infinitGame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
+        <TextView
+            android:id="@+id/desk"
+            android:layout_width="69dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="20dp"
+            android:textAlignment="viewEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/coin"
+            app:layout_constraintEnd_toStartOf="@+id/desk2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/coin"
+            app:layout_constraintTop_toTopOf="@+id/coin"
+            app:layout_constraintVertical_bias="0.0" />
 
+        <TextView
+            android:id="@+id/desk2"
+            android:layout_width="67dp"
+            android:layout_height="41dp"
+            android:drawableLeft="@drawable/ic_baseline_events"
+            app:layout_constraintBottom_toBottomOf="@+id/maindesk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintStart_toEndOf="@+id/coin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.112" />
+
+        <ImageView
+            android:id="@+id/coin"
+            android:layout_width="54dp"
+            android:layout_height="40dp"
+
+            android:src="@drawable/coin"
+            app:layout_constraintBottom_toBottomOf="@+id/maindesk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.028"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.120000005" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="200dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="250dp"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:baselineAlignBottom="true"
+            android:src="@drawable/ic_gift"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/starLig" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
