@@ -7,10 +7,9 @@ public class User {
     String email;
     int coins=1000;
 
-    public User(String username, String password,int id) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.id=id;
     }
 
     public User() {
@@ -28,8 +27,9 @@ public class User {
         return coins;
     }
 
-    public void setCoins(int coins) {
-        this.coins = coins;
+    public void setCoins(int coins)
+    {
+        this.coins+= coins;
     }
 
     public String getUsername() {

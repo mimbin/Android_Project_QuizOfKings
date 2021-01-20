@@ -8,19 +8,23 @@
     android:background="@drawable/back">
 
     <TextView
+        android:id="@+id/questionInfo"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/border"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"/>
 
     <Button
+        android:id="@+id/btnI1"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:background="@drawable/border"
+        android:layout_marginLeft="17dp"
         android:layout_marginTop="300dp"
-        android:layout_marginLeft="30dp"/>
+        android:background="@drawable/border" />
 
     <Button
+        android:id="@+id/btnI2"
         android:layout_width="160dp"
         android:layout_height="100dp"
         android:background="@drawable/border"
@@ -28,13 +32,15 @@
         android:layout_marginLeft="230dp"/>
 
     <Button
+        android:id="@+id/btnI3"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:background="@drawable/border"
+        android:layout_marginLeft="17dp"
         android:layout_marginTop="450dp"
-        android:layout_marginLeft="30dp"/>
+        android:background="@drawable/border" />
 
     <Button
+        android:id="@+id/btnI4"
         android:layout_width="160dp"
         android:layout_height="100dp"
         android:background="@drawable/border"

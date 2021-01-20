@@ -36,8 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
     EditText repeatedPass;
     TextView result;
     User user;
-    private static ArrayList<User> users=new ArrayList<>();
-    private static ArrayList<String> UserNames=new ArrayList<>();
+    public static ArrayList<User> myUsers=MainActivity.users;
 
 
     @Override
@@ -49,7 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
         repeatedPass = (EditText) findViewById(R.id.repeatSignUpPass);
         result = (TextView) findViewById(R.id.signUpText);
         buttonSignUp = (Button) findViewById(R.id.signUpButton);
-
+        user=new User();
 
         password.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,14 +58,15 @@ public class SignUpActivity extends AppCompatActivity {
                 else
                 {
                     try {
-                        checkUser(UserNames,username.getText().toString());
-                        UserNames.add(username.getText().toString());
-                        result.setText(null);
+                        checkUser(myUsers,username.getText().toString());
+                        user.setUsername(username.getText().toString());
+                        myUsers.add(user);
                     }
                     catch (InvalidUsername e)
                     {
                         result.setText(e.getMessage());
                     }
+
                 }
             }
         });
@@ -80,7 +80,6 @@ public class SignUpActivity extends AppCompatActivity {
                {
                    try {
                        checkPassword(password.getText().toString());
-                       result.setText(null);
                    }
                    catch (InvalidPassword e)
                    {
@@ -100,13 +99,12 @@ public class SignUpActivity extends AppCompatActivity {
                 else
                 {
                     try {
+                        checkUser(myUsers,username.getText().toString());
                         checkEqual(password.getText().toString(),repeatedPass.getText().toString());
-                        result.setText(null);
-                        user=new User();
-                        users.add(user);
+                        user.setPassword(password.getText().toString());
                         openGame();
                     }
-                    catch (notEqualExeption e)
+                    catch (notEqualExeption | InvalidUsername e)
                     {
                         result.setText(e.getMessage());
                     }
@@ -119,16 +117,14 @@ public class SignUpActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
-    public static void checkUser(ArrayList<String> userNames,String username) throws InvalidUsername {
-        int i=0;
-        while (i<=userNames.size())
+    public static void checkUser(ArrayList<User> Users,String username) throws InvalidUsername {
+        for(int i=0;i<Users.size();i++)
         {
-            if(userNames.get(i).equals(username))
+            if(Users.get(i).getUsername().equals(username))
             {
                 throw new InvalidUsername("این نام کاربری توسط شخص دیگری استفاده شده");
             }
         }
-
     }
     public static void checkPassword(String password) throws InvalidPassword {
         if(password.length()<5)
@@ -139,14 +135,6 @@ public class SignUpActivity extends AppCompatActivity {
     public static void checkEqual(String pass1,String pass2) throws notEqualExeption {
         if(pass1.equals(pass2)!=true)
             throw new notEqualExeption("رمز عبور به درستی تکرار نشده");
-    }
-    public static ArrayList<String> getList()
-    {
-        return UserNames;
-    }
-    public static ArrayList<User> getListUsers()
-    {
-        return users;
     }
 
 

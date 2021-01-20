@@ -20,7 +20,7 @@ public class newGameActivity extends AppCompatActivity {
         q1=(Button)findViewById(R.id.q1);
         q2=(Button)findViewById(R.id.q2);
         q3=(Button)findViewById(R.id.q3);
-        String[] subjects=new String[8];
+        String[] subjects=new String[7];
         subjects[0]="علم و دانش";
         subjects[1]="غذا و نوشیدنی";
         subjects[2]="اطلاعات عمومی";
@@ -28,7 +28,6 @@ public class newGameActivity extends AppCompatActivity {
         subjects[4]="ورزشی";
         subjects[5]="زبان انگلیسی";
         subjects[6]="مذهبی";
-        subjects[7]="ادبیات";
 
 
         int random1 = 0;
@@ -36,9 +35,9 @@ public class newGameActivity extends AppCompatActivity {
         int random3 = 0;
         while (random1==random2 & random1==random3 & random2==random3)
         {
-            random1=(int)(Math.random()*8);
-            random2=(int)(Math.random()*8);
-            random3=(int)(Math.random()*8);
+            random1=(int)(Math.random()*7);
+            random2=(int)(Math.random()*7);
+            random3=(int)(Math.random()*7);
         }
 
         String sub1=subjects[random1];
@@ -84,10 +83,6 @@ public class newGameActivity extends AppCompatActivity {
                         Intent intent6=new Intent(newGameActivity.this,ReligiousActivity.class);
                         startActivity(intent6);
                         break;
-                    case 7:
-                        Intent intent7=new Intent(newGameActivity.this,LiteratureActivity.class);
-                        startActivity(intent7);
-                        break;
                 }
 
             }
@@ -96,39 +91,34 @@ public class newGameActivity extends AppCompatActivity {
         q2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (finalRandom2)
-                {
+                switch (finalRandom2) {
                     case 0:
-                        Intent intent0=new Intent(newGameActivity.this,ScienceActivity.class);
+                        Intent intent0 = new Intent(newGameActivity.this, ScienceActivity.class);
                         startActivity(intent0);
                         break;
                     case 1:
-                        Intent intent1=new Intent(newGameActivity.this,FoodActivity.class);
+                        Intent intent1 = new Intent(newGameActivity.this, FoodActivity.class);
                         startActivity(intent1);
                         break;
                     case 2:
-                        Intent intent2=new Intent(newGameActivity.this,InformationActivity.class);
+                        Intent intent2 = new Intent(newGameActivity.this, InformationActivity.class);
                         startActivity(intent2);
                         break;
                     case 3:
-                        Intent intent3=new Intent(newGameActivity.this,GeographyActivity.class);
+                        Intent intent3 = new Intent(newGameActivity.this, GeographyActivity.class);
                         startActivity(intent3);
                         break;
                     case 4:
-                        Intent intent4=new Intent(newGameActivity.this,SportsActivity.class);
+                        Intent intent4 = new Intent(newGameActivity.this, SportsActivity.class);
                         startActivity(intent4);
                         break;
                     case 5:
-                        Intent intent=new Intent(newGameActivity.this,EnglishActivity.class);
+                        Intent intent = new Intent(newGameActivity.this, EnglishActivity.class);
                         startActivity(intent);
                         break;
                     case 6:
-                        Intent intent6=new Intent(newGameActivity.this,ReligiousActivity.class);
+                        Intent intent6 = new Intent(newGameActivity.this, ReligiousActivity.class);
                         startActivity(intent6);
-                        break;
-                    case 7:
-                        Intent intent7=new Intent(newGameActivity.this,LiteratureActivity.class);
-                        startActivity(intent7);
                         break;
                 }
 
@@ -167,10 +157,6 @@ public class newGameActivity extends AppCompatActivity {
                     case 6:
                         Intent intent6=new Intent(newGameActivity.this,ReligiousActivity.class);
                         startActivity(intent6);
-                        break;
-                    case 7:
-                        Intent intent7=new Intent(newGameActivity.this,LiteratureActivity.class);
-                        startActivity(intent7);
                         break;
                 }
             }

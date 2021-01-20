@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment {
         TextView desk2=(TextView) view.findViewById(R.id.desk2);
         Button infinite = (Button) view.findViewById(R.id.infinitGame);
         FloatingActionButton fab=(FloatingActionButton) view.findViewById(R.id.fab);
-        desk.setText("200");
+        FloatingActionButton exit=(FloatingActionButton) view.findViewById(R.id.exit);
 
         newGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +74,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getContext(),AddEmailActivity.class);
+                startActivity(intent);
+            }
+        });
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(),LoginActivity.class);
                 startActivity(intent);
             }
         });
