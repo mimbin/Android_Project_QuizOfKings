@@ -44,9 +44,8 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                     else
-                    {
                         Toast.makeText(getApplicationContext(),"invalid Username",Toast.LENGTH_LONG).show();
-                    }
+
                 }
 
             }
