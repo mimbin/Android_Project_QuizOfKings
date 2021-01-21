@@ -12,13 +12,54 @@
         android:layout_height="match_parent">
 
 
+        <Button
+            android:id="@+id/addNewUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="170dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="ثبت نام کاربری"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/preUsername" />
+
+        <EditText
+            android:id="@+id/newUsername"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+
+            android:hint="نام کاربری جدید"
+            app:layout_constraintBottom_toTopOf="@+id/preUsername"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changeUsername" />
+
+        <EditText
+            android:id="@+id/preUsername"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:hint="نام کاربری قدیمی"
+            app:layout_constraintBottom_toTopOf="@+id/addNewUsername"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newUsername" />
+
         <TextView
             android:id="@+id/changeUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="328dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginTop="30dp"
             android:text="نام کاربری جدید خود را وارد کنید"
             android:textAlignment="textEnd"
             android:textColor="@android:color/white"
@@ -27,69 +68,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/preUsername"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="35dp"
-            android:backgroundTint="@android:color/holo_green_dark"
-            android:hint="نام کاربری قدیمی"
-            app:layout_constraintBottom_toTopOf="@+id/changeUsername"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addNewUsername"
-            app:layout_constraintVertical_bias="0.587" />
-
-        <EditText
-            android:id="@+id/newUsername"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="35dp"
-            android:backgroundTint="@android:color/holo_green_dark"
-            android:hint="نام کاربری جدید"
-            app:layout_constraintBottom_toTopOf="@+id/changeUsername"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addNewUsername" />
-
-        <Button
-            android:id="@+id/addNewUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="198dp"
-            android:background="@drawable/border"
-            android:backgroundTint="@android:color/holo_orange_light"
-            android:text="ثبت نام کاربری"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/newUsername"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/warning2" />
 
         <TextView
             android:id="@+id/warning2"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="74dp"
-            android:layout_marginTop="245dp"
             android:layout_marginEnd="37dp"
-            android:layout_marginBottom="26dp"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="320dp"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/changeUsername"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.697" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
